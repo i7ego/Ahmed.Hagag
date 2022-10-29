@@ -27,8 +27,8 @@ local_css("style/style.css")
 # ----load assits ----
 # lottie_coding = load_lottieurl(
 # "https://assets5.lottiefiles.com/packages/lf20_vnikrcia.json")
-img_contact_form = Image.open("images/Untitled.JPG")
-img_lottie_animation = Image.open("images/Untitled1.JPG")
+img_contact_form = Image.open("images/Untitled.jpg")
+img_lottie_animation = Image.open("images/Untitled1.jpg")
 
 
 # -------- Header -----
