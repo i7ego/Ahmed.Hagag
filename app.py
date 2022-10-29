@@ -1,18 +1,17 @@
-from PIL import Image
 import requests
-from numpy import right_shift
 import streamlit as st
-#from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie
+from PIL import Image
 
 
 st.set_page_config(page_title="Ahmed Hagag", page_icon=":star:", layout="wide")
 
 
-# def load_lottieurl(url):
-#   r = requests.get(url)
-#   if r.status_code != 200:
-#       return
-#    return r.json()
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 # use local css
 
@@ -25,8 +24,8 @@ def local_css(file_name):
 local_css("style/style.css")
 
 # ----load assits ----
-# lottie_coding = load_lottieurl(
-# "https://assets5.lottiefiles.com/packages/lf20_vnikrcia.json")
+lottie_coding = load_lottieurl(
+    "https://assets5.lottiefiles.com/packages/lf20_vnikrcia.json")
 img_contact_form = Image.open("images/Untitled.jpg")
 img_lottie_animation = Image.open("images/Untitled1.jpg")
 
@@ -47,16 +46,16 @@ with st.container():
         st.header("What I do")
         st.write("##")
         """
-            I can do many things like 
+            I can do many things like
             - I can make web site by JS and Python,
             - I can make desktop program by python,
-            - I can make a Penetration test for you web site,  
-            - I can make scan for you network and vulnerabilities discovered, 
+            - I can make a Penetration test for you web site,
+            - I can make scan for you network and vulnerabilities discovered,
             - I can fixed your system os like windows , linux and ios.
             """
+    with right_column:
+        st_lottie(lottie_coding, height=300, key="coding")
 
-# with right_column:
-  #  st_lottie(lottie_coding, height=400, key="coding")
 
 with st.container():
     st.write("---")
@@ -69,7 +68,7 @@ with st.container():
         st.subheader("Currency-Conversion")
         st.write(
             """
-            I used in this project to bring a currency converter API, it's constantly being updated 
+            I used in this project to bring a currency converter API, it's constantly being updated
             """
         )
         st.markdown(
@@ -91,18 +90,17 @@ with st.container():
     st.header("Get In Touch With Me!")
     st.write("##")
 # Document
-# contact_form = """
-# <form action="https://formsubmit.co/el/ficeki" method="POST">
-#     <input type="hidden" name="_captcha" value="false">
-#     <input type="text" name="name" placeholder="Your name" required>
-#     <input type="email" name="email" placeholder="Your email" required>
-#     <textarea name="message" placeholder="Your message here" required></textarea>
-#     <button type="submit">Send</button>
-# </form> """
-contact_form = """
- <div id="ab"><iframe src="https://formsubmit.co/el/ficeki" width=1000px, height=1000px,></iframe></div>"""
-left_column, right_column = st.columns(2)
-with left_column:
-    st.markdown(contact_form, unsafe_allow_html=True)
-with right_column:
-    st.empty()
+    contact_form = """
+    <form action="https://formsubmit.co/ahmed.m.hagag22@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message here" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    """
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.markdown(contact_form, unsafe_allow_html=True)
+    with right_column:
+        st.empty()
