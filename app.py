@@ -2,17 +2,17 @@ from PIL import Image
 import requests
 from numpy import right_shift
 import streamlit as st
-from streamlit_lottie import st_lottie
+#from streamlit_lottie import st_lottie
 
 
 st.set_page_config(page_title="Ahmed Hagag", page_icon=":star:", layout="wide")
 
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return
-    return r.json()
+# def load_lottieurl(url):
+#   r = requests.get(url)
+#   if r.status_code != 200:
+#       return
+#    return r.json()
 
 # use local css
 
@@ -25,8 +25,8 @@ def local_css(file_name):
 local_css("style/style.css")
 
 # ----load assits ----
-lottie_coding = load_lottieurl(
-    "https://assets5.lottiefiles.com/packages/lf20_vnikrcia.json")
+# lottie_coding = load_lottieurl(
+# "https://assets5.lottiefiles.com/packages/lf20_vnikrcia.json")
 img_contact_form = Image.open("images/Untitled.JPG")
 img_lottie_animation = Image.open("images/Untitled1.JPG")
 
@@ -55,8 +55,8 @@ with st.container():
             - I can fixed your system os like windows , linux and ios.
             """
 
-with right_column:
-    st_lottie(lottie_coding, height=400, key="coding")
+# with right_column:
+  #  st_lottie(lottie_coding, height=400, key="coding")
 
 with st.container():
     st.write("---")
