@@ -3,6 +3,7 @@ import requests
 from numpy import right_shift
 import streamlit as st
 from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie_spinner
 
 st.set_page_config(page_title="Ahmed Hagag", page_icon=":star:", layout="wide")
 
