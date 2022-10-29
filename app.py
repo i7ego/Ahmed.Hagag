@@ -1,17 +1,17 @@
 import requests
 import streamlit as st
-#from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie
 from PIL import Image
 
 
 st.set_page_config(page_title="Ahmed Hagag", page_icon=":star:", layout="wide")
 
 
-# def load_lottieurl(url):
-#    r = requests.get(url)
-#   if r.status_code != 200:
-#       return None
-#   return r.json()
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 # use local css
 
@@ -24,8 +24,7 @@ def local_css(file_name):
 local_css("style/style.css")
 
 # ----load assits ----
-lottie_coding = load_lottieurl(
-    "https://assets5.lottiefiles.com/packages/lf20_vnikrcia.json")
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 img_contact_form = Image.open("images/Untitled.jpg")
 img_lottie_animation = Image.open("images/Untitled1.jpg")
 
@@ -53,8 +52,8 @@ with st.container():
             - I can make scan for you network and vulnerabilities discovered,
             - I can fixed your system os like windows , linux and ios.
             """
-    # with right_column:
-     #   st_lottie(lottie_coding, height=300, key="coding")
+    with right_column:
+       st_lottie(lottie_coding, height=300, key="coding")
 
 
 with st.container():
