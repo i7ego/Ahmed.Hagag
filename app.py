@@ -91,13 +91,13 @@ with st.container():
     st.write("##")
 # Document
     contact_form = """
-    <form action="https://formsubmit.co/ahmed.m.hagag22@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
+    <form action="https://fabform.io/f/pc33wkP" method="POST">
+        <input type="text" name="First Name" placeholder="Your  First Name" required >
+        <input type="text" name="Last Name" placeholder="Your Last Name" required>
         <input type="email" name="email" placeholder="Your email" required>
         <textarea name="message" placeholder="Your message here" required></textarea>
         <button type="submit">Send</button>
-    </form>
+    </form>  
     """
     left_column, right_column = st.columns(2)
     with left_column:
